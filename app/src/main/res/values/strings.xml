@@ -2,16 +2,19 @@
     <string name="app_name">Secure Note</string>
     <string name="encrypted">Encrypted</string>
     <string name="addNoteTitle">Add Note</string>
+    <string name="editNoteTitle">Edit Note</string>
     <string name="save_note">Save Note</string>
     <string name="title">Title</string>
     <string name="content">Content</string>
     <string name="no_title">Notes must have a Title.</string>
     <string name="encrypt_question">Encrypt?</string>
     <string name="password">Enter Password</string>
+    <string name="password_confirm">Confirm Password</string>
     <string name="pass_cancel">Cancel</string>
     <string name="pass_accept">Enter</string>
     <string name="pass_prompt_cancel">Enter Password Canceled</string>
     <string name="bad_decrypt">Decryption Failed. Try different password.</string>
     <string name="encrypt_pass_empty">Must enter a password to encrypt.</string>
     <string name="decrypt_pass_empty">Must enter a password to decrypt.</string>
+    <string name="pass_no_match">Entered passwords do not match.</string>
 </resources>

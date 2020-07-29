@@ -16,7 +16,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/colorPrimary"
-                app:menu="@menu/note_view_bar" />
+                app:menu="@menu/note_view_bar"
+                app:title="@string/editNoteTitle"
+                app:titleTextColor="@color/black"/>
 
     </com.google.android.material.appbar.AppBarLayout>
 

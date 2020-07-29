@@ -9,7 +9,10 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_note_add.*
 import kotlinx.android.synthetic.main.activity_note_update.noteUpdateToolbar
-import kotlinx.android.synthetic.main.password_prompt.*
+import kotlinx.android.synthetic.main.add_password_prompt.*
+import kotlinx.android.synthetic.main.password_prompt.buPassAccept
+import kotlinx.android.synthetic.main.password_prompt.buPassCancel
+import kotlinx.android.synthetic.main.password_prompt.etPassword
 
 class NoteAdd : AppCompatActivity() {
 
@@ -49,18 +52,34 @@ class NoteAdd : AppCompatActivity() {
 
     private fun getPass(encrypted: Boolean){
         //Inflate AlertDialog with password prompt
-        val alertDialogBuilder = AlertDialog.Builder(this).setView(R.layout.password_prompt)
+        val alertDialogBuilder = AlertDialog.Builder(this).setView(R.layout.add_password_prompt)
         val alertDialog = alertDialogBuilder.show()
 
         //Set on click listeners for buttons
         alertDialog.buPassAccept.setOnClickListener {
             val pass = alertDialog.etPassword.text.toString()
-            alertDialog.dismiss()
+            var passGood = true
             if (pass.isEmpty()){
                 Toast.makeText(this, R.string.encrypt_pass_empty, Toast.LENGTH_LONG).show()
-                return@setOnClickListener
+                passGood = false
+            }else{
+                //check that passwords match
+                val passConfirm = alertDialog.etPasswordConfirm.text.toString()
+                if (passConfirm.isEmpty()){
+                    Toast.makeText(this, R.string.pass_no_match, Toast.LENGTH_LONG).show()
+                    passGood = false
+                }else{
+                    if (!pass.equals(passConfirm, ignoreCase = false)){
+                        Toast.makeText(this, R.string.pass_no_match, Toast.LENGTH_LONG).show()
+                        passGood = false
+                    }
+                }
             }
-            returnNote(encrypted, pass)
+
+            if (passGood){
+                alertDialog.dismiss()
+                returnNote(encrypted, pass)
+            }
         }
 
         alertDialog.buPassCancel.setOnClickListener {

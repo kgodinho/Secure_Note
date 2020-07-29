@@ -5,6 +5,6 @@
     <item
         android:id="@+id/barAddNote"
         android:icon="@drawable/note_add_24px"
-        android:title="@string/addNoteTitle"
-        app:showAsAction="always" />
+        app:showAsAction="always"
+        android:title="@string/app_name" />
 </menu>
