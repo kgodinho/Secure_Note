@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/black"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:id="@+id/noteTicket"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/note_background"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvNoteTitlePlain"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="TextView"
+            android:textColor="@android:color/black"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/tvNoteContentPlain"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="2dp"
+            android:paddingStart="2dp"
+            android:paddingEnd="2dp"
+            android:text="TextView"
+            android:textColor="@android:color/secondary_text_dark"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageButton
+                android:id="@+id/noteDeletePlain"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight=".25"
+                android:background="@android:color/transparent"
+                android:src="@drawable/delete_24px" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
