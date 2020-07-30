@@ -11,7 +11,7 @@
     <string name="password">Enter Password</string>
     <string name="password_confirm">Confirm Password</string>
     <string name="pass_cancel">Cancel</string>
-    <string name="pass_accept">Enter</string>
+    <string name="pass_accept">Accept</string>
     <string name="pass_prompt_cancel">Enter Password Canceled</string>
     <string name="bad_decrypt">Decryption Failed. Try different password.</string>
     <string name="encrypt_pass_empty">Must enter a password to encrypt.</string>
