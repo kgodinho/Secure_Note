@@ -17,4 +17,9 @@
     <string name="encrypt_pass_empty">Must enter a password to encrypt.</string>
     <string name="decrypt_pass_empty">Must enter a password to decrypt.</string>
     <string name="pass_no_match">Entered passwords do not match.</string>
+    <string name="about_title">About</string>
+    <string name="Thank_you">Thank you for downloading this app. You can find its source code here:</string>
+    <string name="license">This app is licensed under the MIT License. Read it here:</string>
+    <string name="app_url"><a href="https://github.com/kgodinho/Secure_Note">https://github.com/kgodinho/Secure_Note</a></string>
+    <string name="license_url"><a href="https://github.com/kgodinho/Secure_Note/blob/master/LICENSE">License page on Github</a></string>
 </resources>

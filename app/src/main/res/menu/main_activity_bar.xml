@@ -7,4 +7,11 @@
         android:icon="@drawable/note_add_24px"
         app:showAsAction="always"
         android:title="@string/app_name" />
+    <group
+        android:enabled="true"
+        android:visible="true" >
+        <item
+            android:id="@+id/barAbout"
+            android:title="@string/about_title" />
+    </group>
 </menu>

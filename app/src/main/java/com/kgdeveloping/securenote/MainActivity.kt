@@ -50,6 +50,13 @@ class MainActivity : AppCompatActivity() {
                     startActivityForResult(intent, NEWNOTE)
                     true
                 }
+                R.id.barAbout -> {
+                    Log.d("MainAppBar", "About Clicked")
+                    //open about activity
+                    intent = Intent(this, about::class.java)
+                    startActivity(intent)
+                    true
+                }
                 else -> false
             }
         }
